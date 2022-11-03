@@ -1,0 +1,154 @@
+/** @format */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fit-content: 7%;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&family=Open+Sans&display=swap");
+
+h1 {
+    color: #6d3485;
+    font-size: 4rem;
+    letter-spacing: 3.5px;
+    font-family: "League Spartan", sans-serif;
+    font-family: "Open Sans", sans-serif;
+}
+
+h4 {
+    font-family: "Ibarra Real Nova", serif;
+    color: rgb(132, 127, 127);
+    font-size: 1.3rem;
+}
+
+nav,
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--fit-content);
+    padding-right: var(--fit-content);
+    padding-top: 1rem;
+    color: #560c75;
+    font-weight: bolder;
+}
+
+.nav-item {
+    margin: 12px;
+    font-size: 1.5rem;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--fit-content);
+}
+
+.imgs-div {
+    background-image: url("../images/backcover.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 9rem;
+}
+
+.left-section {
+    position: relative;
+    top: 7rem;
+}
+
+button {
+    background: linear-gradient(to right, rgb(84, 23, 117), #cb13c2);
+    border-radius: 15px;
+    padding: 10px 30px;
+    margin: 4px 7px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.intro-section .imgs-div img:nth-child(3) {
+    position: relative;
+    right: 7.9rem;
+    top: 3.2rem;
+}
+
+@media screen and (max-width: 767px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        margin: 0;
+        position: absolute;
+    }
+
+    nav {
+        overflow-x: auto;
+    }
+
+    nav .nav-items {
+        margin-top: -0.7rem;
+    }
+
+    nav .nav-item {
+        font-size: 1rem;
+    }
+
+    .intro-section .imgs-div img:nth-child(3) {
+        z-index: -1;
+        opacity: 0.2;
+        display: block;
+        position: relative;
+        width: 24rem;
+        top: 1rem;
+        right: 32rem;
+    }
+
+    body {
+        background-image: url("../images/backcover.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        right: 0;
+    }
+
+    .intro-section .left-section {
+        min-width: 30rem;
+        text-align: justify;
+        font-size: xx-small;
+    }
+
+    .intro-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .intro-section h4 {
+        font-size: 0.9rem;
+        width: 15rem;
+    }
+
+    .intro-section .left-section h4 {
+        max-width: 20rem;
+        color: rgb(36, 35, 35);
+    }
+
+    nav .signin-btn {
+        padding: 10px 0px;
+        min-width: 100px;
+        margin-left: 40px;
+        margin-right: 70px;
+    }
+}
